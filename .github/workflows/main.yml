@@ -34,6 +34,6 @@ jobs:
       - name: Deployment
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ apptestnet }}
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ APP_AZURE }}
           package: "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
